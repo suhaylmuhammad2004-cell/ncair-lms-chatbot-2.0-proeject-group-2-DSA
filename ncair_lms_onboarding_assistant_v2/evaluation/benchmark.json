@@ -1,0 +1,1987 @@
+{
+  "name": "NCAIR LMS assistant benchmark v2",
+  "description": "Realistic, manual-grounded questions (written by the project team from the NCAIR onboarding manual and the NCAIR knowledge base, not collected from live users). Each case lists the expected tool calls, facts a correct answer must contain (each fact is a list of acceptable alternatives), the expected links, and the gold source sections that must be retrievable.",
+  "schema": {
+    "expected_calls": "list of {tool,args}; [] means no tool (small talk). Arg values are checked for get_portal_link.page_id and get_onboarding_step.step; search args are not checked.",
+    "acceptable_tool_sets": "optional alternative sets of tool NAMES that also count as correct routing",
+    "expected_facts": "list of facts; each fact is a list of alternatives, any one present (case-insensitive) satisfies that fact",
+    "gold_sources": "section ids ('doc/section') of which at least one should appear in the retrieved results",
+    "should_abstain": "true when the documents do not answer the question",
+    "translation_status": "multilingual questions are drafts and should be checked by native speakers"
+  },
+  "cases": [
+    {
+      "id": "L01",
+      "category": "link",
+      "language": "en",
+      "query": "Where can I find the NCAIR LMS website?",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "lms_home"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "lms_home"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "The NCAIR LMS is at https://lms.ncair.nitda.gov.ng.",
+      "source_note": "manual p.1"
+    },
+    {
+      "id": "L02",
+      "category": "link",
+      "language": "en",
+      "query": "Please send me the sign in link",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Sign in at https://lms.ncair.nitda.gov.ng/intern/signin.",
+      "source_note": "manual p.7"
+    },
+    {
+      "id": "L03",
+      "category": "link",
+      "language": "en",
+      "query": "I need the page to log in to my intern account",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Log in at https://lms.ncair.nitda.gov.ng/intern/signin.",
+      "source_note": "manual p.7"
+    },
+    {
+      "id": "L04",
+      "category": "link",
+      "language": "en",
+      "query": "Link to my profile page please",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "profile"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "profile"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Your profile page is https://lms.ncair.nitda.gov.ng/intern/profile.",
+      "source_note": "portal_pages.json (unverified URL)"
+    },
+    {
+      "id": "L05",
+      "category": "link",
+      "language": "en",
+      "query": "Where do I see my courses after logging in? Give me the link.",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "courses"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "courses"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Open the Courses page: https://lms.ncair.nitda.gov.ng/intern/courses (menu > Courses).",
+      "source_note": "manual p.7"
+    },
+    {
+      "id": "L06",
+      "category": "link",
+      "language": "en",
+      "query": "What is the website of NCAIR itself, not the LMS?",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "ncair_website"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "ncair_website"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "The NCAIR website is https://ncair.nitda.gov.ng/.",
+      "source_note": "portal_pages.json"
+    },
+    {
+      "id": "L07",
+      "category": "link",
+      "language": "en",
+      "query": "Where do I go to register for the program?",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "lms_home"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "lms_home"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Registration starts at the hall; the invitation email's Complete registration button opens a page on https://lms.ncair.nitda.gov.ng.",
+      "source_note": "manual p.1,4"
+    },
+    {
+      "id": "L08",
+      "category": "link",
+      "language": "en",
+      "query": "I'm a returning intern, where do I log back in?",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Returning interns sign in at https://lms.ncair.nitda.gov.ng/intern/signin.",
+      "source_note": "manual p.10"
+    },
+    {
+      "id": "L09",
+      "category": "link",
+      "language": "en",
+      "query": "Can I get the NCAIR contact page link?",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "contact"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "contact"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "The NCAIR contact page is https://ncair.nitda.gov.ng/contact/.",
+      "source_note": "portal_pages.json (unverified URL)"
+    },
+    {
+      "id": "L10",
+      "category": "link",
+      "language": "en",
+      "query": "Open the portal for me",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "lms_home"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "lms_home"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "The NCAIR LMS portal is https://lms.ncair.nitda.gov.ng.",
+      "source_note": "manual p.1"
+    },
+    {
+      "id": "S01",
+      "category": "step",
+      "language": "en",
+      "query": "Walk me through every step of the registration",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "all"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Complete registration"
+        ],
+        [
+          "Create account"
+        ],
+        [
+          "Sign In",
+          "sign in"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-1",
+        "manual/step-2",
+        "manual/step-3",
+        "manual/step-4",
+        "manual/step-5",
+        "manual/step-6",
+        "manual/step-7",
+        "manual/step-8",
+        "manual/step-9",
+        "manual/step-10"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Lists all 10 steps from staff registration through registering for both beginner courses.",
+      "source_note": "manual p.3-9"
+    },
+    {
+      "id": "S02",
+      "category": "step",
+      "language": "en",
+      "query": "What do I do in step 4?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "4"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "NIN"
+        ],
+        [
+          "Program"
+        ],
+        [
+          "password",
+          "Password"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Fill in the form: email is pre-filled, enter your 11-digit NIN, phone, program (SIWES or NYSC), gender and a password of 8+ characters with a letter and a number; NYSC interns also pick a CDS day.",
+      "source_note": "manual p.5"
+    },
+    {
+      "id": "S03",
+      "category": "step",
+      "language": "en",
+      "query": "I'm filling the form and don't know what to put for Program",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "4"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "SIWES"
+        ],
+        [
+          "NYSC"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Tap the Program box and choose SIWES or NYSC, whichever you are.",
+      "source_note": "manual p.5"
+    },
+    {
+      "id": "S04",
+      "category": "step",
+      "language": "en",
+      "query": "What should I do after I create my account?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "6"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Go to Sign In"
+        ]
+      ],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [
+        "manual/step-6"
+      ],
+      "should_abstain": false,
+      "reference_answer": "You will see Welcome aboard; tap the green Go to Sign In button.",
+      "source_note": "manual p.6"
+    },
+    {
+      "id": "S05",
+      "category": "step",
+      "language": "en",
+      "query": "I'm on my dashboard, where do I tap to open my courses?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "8"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "menu"
+        ],
+        [
+          "Courses"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-8"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Tap the menu icon at the top-left, then tap Courses.",
+      "source_note": "manual p.7"
+    },
+    {
+      "id": "S06",
+      "category": "step",
+      "language": "en",
+      "query": "How do I register for Product Design after Python Beginners?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "10"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Product Design Beginners"
+        ],
+        [
+          "REGISTER"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-10"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Scroll to the Product Design Beginners card and tap its green REGISTER button.",
+      "source_note": "manual p.9"
+    },
+    {
+      "id": "S07",
+      "category": "step",
+      "language": "en",
+      "query": "I opened the invitation email, what do I tap next?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "3"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Complete registration"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-3"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Tap the green Complete registration button in the email.",
+      "source_note": "manual p.4"
+    },
+    {
+      "id": "S08",
+      "category": "step",
+      "language": "en",
+      "query": "How do I sign in the first time after creating my account?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "7"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Email"
+        ],
+        [
+          "Sign In"
+        ]
+      ],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [
+        "manual/step-7"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Keep the Email tab selected, enter your email and password, and tap Sign In.",
+      "source_note": "manual p.7"
+    },
+    {
+      "id": "S09",
+      "category": "step",
+      "language": "en",
+      "query": "What is the very first thing that happens when I get to the hall?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "1"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "staff"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-1"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Staff register you using your details, and an invitation email is then sent to you.",
+      "source_note": "manual p.3"
+    },
+    {
+      "id": "S10",
+      "category": "step",
+      "language": "en",
+      "query": "Which email should I look for and what is the subject line?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "2"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "NCAIR LMS"
+        ],
+        [
+          "Complete your NCAIR LMS internship registration"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-2"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Look for a message from NCAIR LMS titled Complete your NCAIR LMS internship registration.",
+      "source_note": "manual p.4"
+    },
+    {
+      "id": "S11",
+      "category": "step",
+      "language": "en",
+      "query": "What must the password checklist show before I create my account?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "5"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "green"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-5"
+      ],
+      "should_abstain": false,
+      "reference_answer": "All green ticks: at least 8 characters, a number, a letter and matching confirmation.",
+      "source_note": "manual p.6"
+    },
+    {
+      "id": "S12",
+      "category": "step",
+      "language": "en",
+      "query": "I'm stuck on step 9",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "9"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Python Beginners"
+        ],
+        [
+          "REGISTER"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-9"
+      ],
+      "should_abstain": false,
+      "reference_answer": "On the Python Beginners card tap the green REGISTER button; if it shows Locked, registration is not open (before the day or after 5 PM).",
+      "source_note": "manual p.8"
+    },
+    {
+      "id": "K01",
+      "category": "kb",
+      "language": "en",
+      "query": "If I pass all my tests but miss too many classes, do I still pass?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "75%"
+        ],
+        [
+          "retake"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "No. At least 75% attendance is required; below that you must retake the cohort even if you passed everything else.",
+      "source_note": "KB 4"
+    },
+    {
+      "id": "K02",
+      "category": "kb",
+      "language": "en",
+      "query": "How often do SIWES interns need to sign their logbook?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "two (2) weeks",
+          "every two",
+          "2 weeks",
+          "two weeks"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-3"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Every two weeks at NCAIR Headquarters, in person.",
+      "source_note": "KB 3"
+    },
+    {
+      "id": "K03",
+      "category": "kb",
+      "language": "en",
+      "query": "What courses do SIWES interns take in their first cohort?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "Python Beginners"
+        ],
+        [
+          "Product Design"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-3",
+        "manual/program-differences"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Python Beginners and Product Design (UI/UX) Beginners, at the same time.",
+      "source_note": "KB 3, manual p.2"
+    },
+    {
+      "id": "K04",
+      "category": "kb",
+      "language": "en",
+      "query": "What are the password requirements?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "8 characters",
+          "eight characters"
+        ],
+        [
+          "number"
+        ],
+        [
+          "letter"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-5",
+        "manual/step-4",
+        "manual/step-5",
+        "manual/problem-password-rejected"
+      ],
+      "should_abstain": false,
+      "reference_answer": "At least 8 characters with at least one number and one letter, and both password boxes must match.",
+      "source_note": "KB 5, manual p.5,6,9"
+    },
+    {
+      "id": "K05",
+      "category": "kb",
+      "language": "en",
+      "query": "What file formats and size are allowed for ID uploads?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "PDF"
+        ],
+        [
+          "PNG"
+        ],
+        [
+          "2MB",
+          "2 MB"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-5"
+      ],
+      "should_abstain": false,
+      "reference_answer": "PDF or PNG, under 2MB.",
+      "source_note": "KB 5"
+    },
+    {
+      "id": "K06",
+      "category": "kb",
+      "language": "en",
+      "query": "I can't find the registration email anywhere, what should I do?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "Spam",
+          "spam"
+        ],
+        [
+          "Inbox",
+          "inbox"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/problem-no-email",
+        "manual/step-2",
+        "kb/kb-5"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Check Spam, Junk and Trash, move the email to your Inbox, wait a minute and refresh, and tell a staff member if it still does not show.",
+      "source_note": "manual p.4,9; KB 5"
+    },
+    {
+      "id": "K07",
+      "category": "kb",
+      "language": "en",
+      "query": "Do returning interns have to go through onboarding again?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "not need",
+          "do NOT need",
+          "don't need",
+          "no need"
+        ],
+        [
+          "email and password"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-6",
+        "manual/returning"
+      ],
+      "should_abstain": false,
+      "reference_answer": "No. Returning interns sign in with their existing email and password.",
+      "source_note": "KB 6, manual p.10"
+    },
+    {
+      "id": "K08",
+      "category": "kb",
+      "language": "en",
+      "query": "What happens if I fail a course, can I retake it?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "Re-register"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-6",
+        "manual/returning"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Yes. Open Courses, find the failed course and tap Re-register.",
+      "source_note": "KB 6, manual p.10"
+    },
+    {
+      "id": "K09",
+      "category": "kb",
+      "language": "en",
+      "query": "As an NYSC member, what does picking a CDS day do for me?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "excuse"
+        ],
+        [
+          "CDS"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-3"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Selecting a CDS day gives you an official excuse from classes on that day.",
+      "source_note": "KB 3"
+    },
+    {
+      "id": "K10",
+      "category": "kb",
+      "language": "en",
+      "query": "Where is NCAIR physically located?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "Plot 790"
+        ],
+        [
+          "Wuye"
+        ],
+        [
+          "Abuja"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-1"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Plot 790, Alimoh-Abu Street, behind VIO Yard, Wuye District, Abuja.",
+      "source_note": "KB 1"
+    },
+    {
+      "id": "K11",
+      "category": "kb",
+      "language": "en",
+      "query": "What time does registration close?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "5:00 PM",
+          "5 PM",
+          "5pm",
+          "5:00 pm"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-5",
+        "manual/rules",
+        "manual/problem-locked"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Registration closes at 5:00 PM on the registration day.",
+      "source_note": "KB 5, manual p.2"
+    },
+    {
+      "id": "K12",
+      "category": "kb",
+      "language": "en",
+      "query": "How many times a week are classes held and how long is each session?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "three",
+          "3"
+        ],
+        [
+          "2 to 3 hours",
+          "2-3 hours",
+          "two to three hours"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Three times a week, roughly 2 to 3 hours per session depending on the cohort.",
+      "source_note": "KB 4"
+    },
+    {
+      "id": "K13",
+      "category": "kb",
+      "language": "en",
+      "query": "What is the minimum attendance I need to pass?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "75%"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "At least 75% attendance.",
+      "source_note": "KB 4"
+    },
+    {
+      "id": "K14",
+      "category": "kb",
+      "language": "en",
+      "query": "What is the order of the courses? What comes after Python Advanced?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "Data Science Beginners"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-2"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Data Science Beginners comes next in the strict sequence.",
+      "source_note": "KB 2"
+    },
+    {
+      "id": "K15",
+      "category": "kb",
+      "language": "en",
+      "query": "How do I unlock the next course?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "attendance"
+        ],
+        [
+          "assessment",
+          "assessments"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4",
+        "manual/returning"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Pass both attendance (75%) and assessments; the next course then unlocks under My Learning > Courses.",
+      "source_note": "KB 4, manual p.10"
+    },
+    {
+      "id": "K16",
+      "category": "kb",
+      "language": "en",
+      "query": "What should I bring on registration day?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "NIN"
+        ],
+        [
+          "acceptance letter",
+          "Acceptance letter"
+        ],
+        [
+          "phone"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/bring",
+        "manual/quick-reference"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Acceptance letter, NIN, a smartphone with data, and a password you will remember.",
+      "source_note": "manual p.1-2,10"
+    },
+    {
+      "id": "K17",
+      "category": "kb",
+      "language": "en",
+      "query": "Where do new interns physically register?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "50-Seater Hall"
+        ],
+        [
+          "PSIN",
+          "e-Government"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-1",
+        "manual/overview"
+      ],
+      "should_abstain": false,
+      "reference_answer": "At the 50-Seater Hall, e-Government Building (PSIN), right after orientation.",
+      "source_note": "KB 1, manual p.1"
+    },
+    {
+      "id": "K18",
+      "category": "kb",
+      "language": "en",
+      "query": "Why does the REGISTER button say Locked?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "day"
+        ],
+        [
+          "5 PM",
+          "5:00 PM"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/problem-locked",
+        "kb/kb-5",
+        "manual/step-9",
+        "manual/rules"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Registration only opens on the day and closes at 5 PM. If it is the day, refresh or ask staff.",
+      "source_note": "manual p.2,8,9; KB 5"
+    },
+    {
+      "id": "K19",
+      "category": "kb",
+      "language": "en",
+      "query": "Are the two beginner courses compulsory for NYSC members?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "optional"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/program-differences"
+      ],
+      "should_abstain": false,
+      "reference_answer": "No, both courses are optional for NYSC interns, but they may register for both at once.",
+      "source_note": "manual p.2"
+    },
+    {
+      "id": "K20",
+      "category": "kb",
+      "language": "en",
+      "query": "Do SIWES interns have to register for both courses at once?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "both"
+        ],
+        [
+          "compulsory",
+          "must",
+          "simultaneously",
+          "same time"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-3",
+        "manual/program-differences"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Yes. SIWES interns must register for Python Beginners and Product Design Beginners.",
+      "source_note": "KB 3, manual p.2"
+    },
+    {
+      "id": "K21",
+      "category": "kb",
+      "language": "en",
+      "query": "My internet is very slow at the hall. What can I do?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "data"
+        ],
+        [
+          "window",
+          "staff"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/problem-slow-internet"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Make sure your data is on, move nearer a window, or ask staff about Wi-Fi.",
+      "source_note": "manual p.10"
+    },
+    {
+      "id": "K22",
+      "category": "kb",
+      "language": "en",
+      "query": "What does NCAIR stand for and which body is it under?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "National Centre for Artificial Intelligence"
+        ],
+        [
+          "NITDA"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-1"
+      ],
+      "should_abstain": false,
+      "reference_answer": "National Centre for Artificial Intelligence and Robotics, a special purpose vehicle of NITDA.",
+      "source_note": "KB 1"
+    },
+    {
+      "id": "K23",
+      "category": "kb",
+      "language": "en",
+      "query": "I forgot my password, what now?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "Forgot password"
+        ]
+      ],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [
+        "manual/problem-forgot-password"
+      ],
+      "should_abstain": false,
+      "reference_answer": "On the sign-in screen tap Forgot password?, or ask a staff member.",
+      "source_note": "manual p.10"
+    },
+    {
+      "id": "K24",
+      "category": "kb",
+      "language": "en",
+      "query": "How long does the onboarding take?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "10"
+        ],
+        [
+          "20"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/big-picture",
+        "manual/overview"
+      ],
+      "should_abstain": false,
+      "reference_answer": "You can finish your own setup in about 10 to 20 minutes.",
+      "source_note": "manual p.1,3"
+    },
+    {
+      "id": "K25",
+      "category": "kb",
+      "language": "en",
+      "query": "Is there a support phone line I can call for registration issues?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "no"
+        ],
+        [
+          "on-site",
+          "physically",
+          "in person",
+          "facilitators",
+          "staff"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-1"
+      ],
+      "should_abstain": false,
+      "reference_answer": "No. There is no external registration support link or phone line; onboarding is done on-site with facilitators in the PSIN hall.",
+      "source_note": "KB 1"
+    },
+    {
+      "id": "O01",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "What's the WiFi password at the NCAIR building?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "The documents do not give the Wi-Fi password; the manual only says to ask staff about Wi-Fi.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O02",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "Who founded NCAIR and in what year?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Not covered in the documents.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O03",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "If my laptop breaks during the program, will NCAIR replace it?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Not covered in the documents.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O04",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "How much is the monthly stipend for interns?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Not covered in the documents.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O05",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "What is the dress code at NCAIR?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Not covered in the documents.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O06",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "Will I get a certificate at the end of the internship?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Not covered in the documents.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O07",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "Who teaches Python Advanced?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Not covered in the documents.",
+      "source_note": "not in manual or KB"
+    },
+    {
+      "id": "O08",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "What is the weather in Abuja today?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Off-topic; the assistant only covers NCAIR LMS onboarding.",
+      "source_note": "not in manual or KB",
+      "acceptable_tool_sets": [
+        [
+          "search_knowledge_base"
+        ],
+        []
+      ]
+    },
+    {
+      "id": "O09",
+      "category": "out_of_scope",
+      "language": "en",
+      "query": "Write me a poem about robots",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": true,
+      "reference_answer": "Off-topic; the assistant only covers NCAIR LMS onboarding.",
+      "source_note": "not in manual or KB",
+      "acceptable_tool_sets": [
+        [
+          "search_knowledge_base"
+        ],
+        []
+      ]
+    },
+    {
+      "id": "T01",
+      "category": "smalltalk",
+      "language": "en",
+      "query": "hi there",
+      "expected_calls": [],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "A friendly greeting and an offer to help.",
+      "source_note": ""
+    },
+    {
+      "id": "T02",
+      "category": "smalltalk",
+      "language": "en",
+      "query": "Thank you so much!",
+      "expected_calls": [],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "A short polite reply.",
+      "source_note": ""
+    },
+    {
+      "id": "T03",
+      "category": "smalltalk",
+      "language": "en",
+      "query": "Good morning, how are you?",
+      "expected_calls": [],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "A friendly greeting and an offer to help.",
+      "source_note": ""
+    },
+    {
+      "id": "M01",
+      "category": "multi_tool",
+      "language": "en",
+      "query": "How do I register for Python Beginners, and where is the page?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "9"
+          }
+        },
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "courses"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "REGISTER"
+        ]
+      ],
+      "expected_links": [
+        "courses"
+      ],
+      "gold_sources": [
+        "manual/step-9"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Tap REGISTER on the Python Beginners card on the Courses page (link).",
+      "source_note": "manual p.8"
+    },
+    {
+      "id": "M02",
+      "category": "multi_tool",
+      "language": "en",
+      "query": "Send me the sign in link and tell me what to do on that page",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        },
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "7"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "Sign In"
+        ]
+      ],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [
+        "manual/step-7"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Link plus: keep the Email tab selected, enter email and password, tap Sign In.",
+      "source_note": "manual p.7"
+    },
+    {
+      "id": "M03",
+      "category": "multi_tool",
+      "language": "en",
+      "query": "Give me the sign in link and also tell me the minimum attendance",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        },
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "75%"
+        ]
+      ],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Sign-in link plus: at least 75% attendance.",
+      "source_note": "KB 4, manual p.7"
+    },
+    {
+      "id": "H01",
+      "category": "multilingual",
+      "language": "ha",
+      "query": "Ina neman link din shiga asusun LMS na NCAIR.",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Sign-in link.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "I am looking for the link to sign in to my NCAIR LMS account."
+    },
+    {
+      "id": "H02",
+      "category": "multilingual",
+      "language": "ha",
+      "query": "Nawa ne mafi ƙarancin halartar aji da ake buƙata don a ci cohort?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "75%"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "At least 75% attendance.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "What is the minimum class attendance required to pass the cohort?"
+    },
+    {
+      "id": "H03",
+      "category": "multilingual",
+      "language": "ha",
+      "query": "Na makale a mataki na 4 na rajista, me zan yi?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "4"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Step 4: fill in your details.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "I am stuck at step 4 of registration, what should I do?"
+    },
+    {
+      "id": "Y01",
+      "category": "multilingual",
+      "language": "yo",
+      "query": "Mo fẹ́ ọ̀nà àbáwọlé (link) láti wọlé sí LMS NCAIR.",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Sign-in link.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "I want the link to log in to the NCAIR LMS."
+    },
+    {
+      "id": "Y02",
+      "category": "multilingual",
+      "language": "yo",
+      "query": "Agogo wo ni ìforúkọsílẹ̀ máa ń parí ní ọjọ́ náà?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "5:00 PM",
+          "5 PM"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-5",
+        "manual/rules",
+        "manual/problem-locked"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Registration closes at 5:00 PM.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "What time does registration close on the day?"
+    },
+    {
+      "id": "Y03",
+      "category": "multilingual",
+      "language": "yo",
+      "query": "Mo ti gbàgbé ọ̀rọ̀ aṣínà mi, kí ni kí n ṣe?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/problem-forgot-password"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Tap Forgot password? on the sign-in screen, or ask staff.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "I forgot my password, what should I do?"
+    },
+    {
+      "id": "I01",
+      "category": "multilingual",
+      "language": "ig",
+      "query": "Biko nye m njikọ ịbanye na LMS NCAIR.",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Sign-in link.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "Please give me the link to sign in to the NCAIR LMS."
+    },
+    {
+      "id": "I02",
+      "category": "multilingual",
+      "language": "ig",
+      "query": "Gịnị ka m ga-eme ma ọ bụrụ na m agafeghị otu nkuzi, m ga-ejikwa ya malitegharịa?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-6",
+        "manual/returning"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Open Courses and tap Re-register on the failed course.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "What should I do if I did not pass a course, can I retake it?"
+    },
+    {
+      "id": "I03",
+      "category": "multilingual",
+      "language": "ig",
+      "query": "Ebee ka NCAIR dị n'ezie?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-1"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Plot 790, Alimoh-Abu Street, Wuye District, Abuja.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "Where is NCAIR actually located?"
+    },
+    {
+      "id": "P01",
+      "category": "multilingual",
+      "language": "pcm",
+      "query": "Abeg, where I fit find di link to log in for LMS?",
+      "expected_calls": [
+        {
+          "tool": "get_portal_link",
+          "args": {
+            "page_id": "sign_in"
+          }
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [
+        "sign_in"
+      ],
+      "gold_sources": [],
+      "should_abstain": false,
+      "reference_answer": "Sign-in link.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "Please, where can I find the link to log in to the LMS?"
+    },
+    {
+      "id": "P02",
+      "category": "multilingual",
+      "language": "pcm",
+      "query": "If I pass all my test but I no attend class reach, I go still pass?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "No; 75% attendance is needed or you retake.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "If I pass all my tests but do not attend enough classes, will I still pass?"
+    },
+    {
+      "id": "P03",
+      "category": "multilingual",
+      "language": "pcm",
+      "query": "I no see di email wey dem send me, wetin I go do?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/problem-no-email",
+        "manual/step-2",
+        "kb/kb-5"
+      ],
+      "should_abstain": false,
+      "reference_answer": "Check Spam/Junk/Trash.",
+      "source_note": "",
+      "translation_status": "draft-needs-native-review",
+      "english_query": "I cannot see the email they sent me, what should I do?"
+    },
+    {
+      "id": "F01",
+      "category": "followup",
+      "language": "en",
+      "query": "And what about the CDS day?",
+      "expected_calls": [
+        {
+          "tool": "get_onboarding_step",
+          "args": {
+            "step": "4"
+          }
+        }
+      ],
+      "expected_facts": [
+        [
+          "CDS"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "manual/step-4",
+        "kb/kb-3"
+      ],
+      "should_abstain": false,
+      "reference_answer": "NYSC interns see a CDS Day box after choosing NYSC in Program and pick a day.",
+      "source_note": "manual p.5",
+      "history": [
+        {
+          "role": "user",
+          "content": "How do I fill in the registration form?"
+        },
+        {
+          "role": "assistant",
+          "content": "Step 4: enter your NIN, phone, program, gender and a password."
+        }
+      ],
+      "acceptable_tool_sets": [
+        [
+          "get_onboarding_step"
+        ],
+        [
+          "search_knowledge_base"
+        ]
+      ],
+      "english_query": "What about the CDS day for NYSC interns when filling the registration form?"
+    },
+    {
+      "id": "F02",
+      "category": "followup",
+      "language": "en",
+      "query": "and what happens if I don't reach it?",
+      "expected_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {}
+        }
+      ],
+      "expected_facts": [
+        [
+          "retake"
+        ]
+      ],
+      "expected_links": [],
+      "gold_sources": [
+        "kb/kb-4"
+      ],
+      "should_abstain": false,
+      "reference_answer": "You automatically retake the cohort.",
+      "source_note": "KB 4",
+      "history": [
+        {
+          "role": "user",
+          "content": "What is the minimum attendance I need?"
+        },
+        {
+          "role": "assistant",
+          "content": "You need at least 75% attendance."
+        }
+      ],
+      "english_query": "What happens if I do not reach the minimum attendance?"
+    }
+  ]
+}

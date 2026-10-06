@@ -1,0 +1,25 @@
+# NCAIR LMS Onboarding Assistant (version 2.0) -- all Python dependencies.
+# Install with:  pip install -r requirements.txt
+# System tools that pip cannot install (Ollama; poppler + tesseract for OCR) are listed in README.md.
+
+# --- Chat application (src/app.py) ---------------------------------------
+gradio>=4.44                  # web chat interface
+numpy>=1.26                   # dense-retrieval embeddings cache
+sentence-transformers>=3.0    # multilingual dense retrieval (also pulls in torch + transformers);
+                              # the app falls back to BM25 only if this is missing
+
+# --- Model download (scripts/setup_natlas.sh) ------------------------------
+huggingface_hub[cli]>=0.24    # provides the huggingface-cli command
+
+# --- Comparison with version 1.0 (comparison/) -----------------------------
+requests>=2.31                # version 1.0 calls Ollama through requests
+langchain>=0.2                # version 1.0 pipeline
+langchain-community>=0.2      # version 1.0: loaders, FAISS wrapper, HuggingFaceEmbeddings
+langchain-text-splitters>=0.2 # version 1.0: RecursiveCharacterTextSplitter
+faiss-cpu>=1.8                # version 1.0: vector index
+ipython>=8.0                  # imported at the top of comparison/old_app.py
+
+# --- OCR (scripts/ingest_pdf.py and version 1.0) ----------------------------
+pytesseract>=0.3.10
+pdf2image>=1.17
+pillow>=10.0

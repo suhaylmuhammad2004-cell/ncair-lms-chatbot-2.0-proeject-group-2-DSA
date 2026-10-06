@@ -1,0 +1,409 @@
+===== PAGE 1 =====
+NCAIR - National Centre for
+Artificial Intelligence & Robotics
+
+N TUDENT ONBOARDIN UAL
+
+Register on th
+
+NCAIR LMS — step by step
+
+A simple, picture-by-picture guide for brand-new interns. Follow each
+step in order and you'll be fully set up in minutes. If you can read this, you
+can finish your registration.
+
+REINS SACU One-time onboarding — ® Ims.ncairnitda.goving
+
+Fo | Start here — where to go
+
+Right after the orientation, walk from the auditorium to the 50-Seater Hall, e-
+Government Building (PSIN). Form a single straight line and wait your turn. This is
+a one-time onboarding for interns who are completely new.
+
+BEFORE YOU START
+
+What to bring with you
+
+Come prepared. Without these you may not be able to finish your registration
+on the spot.
+
+Acceptance letter ® YourNIN
+Your letter from NITDA HQ. A physical copy, a Bring your NIN slip, or know your 11-digit NIN
+soft copy, or a clear photo on your phone — by heart, or have it written down somewhere.
+
+any one is fine.
+===== PAGE 2 =====
+Q Your phone + data @  Apassword you'll remember
+
+A smartphone you can open your email on, Think of one now. You'll create it during sign-
+with mobile data / internet turned on. No up and you'll need it every time you log in.
+data means you cannot register.
+
+READ THIS FIRST
+
+The golden rules
+
+GD check your Spam / Junk folder. Our registration email sometimes lands there. Every
+student should look in Spam if the email isn't in the inbox.
+
+GJ Use a password you can remember. Don't use something random you'll forget — you
+need it to log in every time.
+
+Don't leave the hall until you are fully done. No intern leaves until they have
+successfully onboarded and registered for their courses.
+
+-
+A\ Registration only opens on the day, and closes at 5:00 PM. Before the day and after
+5 PM the course button shows “Locked” and you cannot register.
+
+x
+‘SIWES interns NYSC interns
+
+Both courses are compulsory. You must Both courses are optional, but you may
+
+register for Python Beginners and Product register for both at the same time. You'll
+
+Design (UI/UX) Beginners. also pick your CDS day on the form.
+===== PAGE 3 =====
+THE BIG PICTURE
+
+How onboarding works
+Line up in the Staff registers Check your Create your Sign in
+hall you email account
+
+Register for both courses
+
+Do IT Now
+. .
+
+Step- by-step registration
+
+Each step shows you exactly what to tap. The @ circle and the coloured box
+
+on each picture point to the button you should tap next.
+
+Jd Get registered by our staff
+
+When it's your turn in the line, give the staff your details
+
+@ Finish your own
+setup in 10-20 min
+
+They add you to the system on our end, The moment
+they do, an invitation email is sent to you
+===== PAGE 4 =====
+Open your email and find our
+message
+
+jearch in m
+
+¥ Open your email app (Gmail) on your phone.
+
+v Look for a message from “NCAIR LMS” — subject @ _
+“Complete your NCAIR LMS internship NCAIRLMS
+ae , Complete your NCAIR LMS internship.
+registration.” Tap it to open @ bur secure NCAIR LMS registration link
+
+A\ Can't see it? Check your Spam / Junk / Trash
+folder. Every student should look there if it isn't
+in the inbox.
+
+<
+
+Complete your NCAIR LM
+internship registration (in
+
+3 | Tap “Complete registra
+
+v “Inside the email, tap the green “Complete
+registration” button. @
+
+v _Itopens a page on Ims.ncair.nitda.gov.ng where
+you'll create your account.
+
+© Button won't open or won't tap? That means
+the email is in Spam or Trash. First move the
+email to your Inbox (or tap “Not spam”), then
+tap the button again.
+
+===== PAGE 5 =====
+o Fillin your details
+Top of the form
+@ Email — already filled in for you. Leave it as itis.
+
+@ NIN —type your 11-digit NIN. Check your first and
+last name below it are correct.
+
+Lower down the form
+Phone number — type the number you use.
+
+Program — tap and choose SIWES or NYSC
+(whichever you are).
+
+Gender — choose your gender.
+
+©e@ Cco
+
+Password & Confirm password — create a
+password you'll remember, then type it again. It
+needs at least 8 characters, one letter and one
+number
+
+NysCinterns Choose your CDS day
+
+When you pick NYSC in the Program box, a new
+“CDS Day” box appears just below it. Tap it and
+choose your day:
+
+CDS Day
+Select CDS day 7
+
+e.g, Monday - Tuesday - Wednesday - Thursday - Friday
+
+Create your intern
+account
+
+Complete the form to create your
+account.
+
+=z
+
+First name
+
+Olorunsola
+Last name
+
+owa
+
+Phone number
+
+G)
+EE :
+
+Gender
+
+Select gender v
+
+gossvord
+
+Confirm password
+
+===== PAGE 6 =====
+Agree, then create your
+account
+
+Make sure the Password checklist shows all
+green ticks,
+
+@ Tick the box “I confirm that I am the intended
+recipient.
+
+@ Tap the green “Create account” button.
+
+6 | You're set — go to signin
+
+v You'll see “Welcome aboard, [your name]
+your account is created.
+
+@ Tap the green “Go to Sign In” button.
+
+PASSWORD CHECKLIST
+
+VY atleast 8 characters
+
+Y Contains a number
+
+Y Contains a letter
+
+Y > Matches confirmation
+
+that | am the intended
+i ofthis invite and agree to.
+AIR LMS privacy policy.
+
+Create account
+
+Welcome aboard,
+Olorunsola!
+
+Your NCAIR LMS intern profile is
+ready. Sign in to access your
+dashboard and continue
+onboarding.
+
+REGISTERED EMAIL
+agmailcom
+
+You can sign in now to review your profile,
+confirm your onboarding details, and
+continue your intemship journey.
+
+9) Goto Sign in
+
+Back to Homepage
+===== PAGE 7 =====
+Sign in to your account
+
+@ Keep the “Email” tab selected. Type your email.
+@ ‘Type the password you just created
+© Tap “Sign In”
+
+@® Thisis the same page you'll log in at every time.
+
+Save it:
+Ims.ncair.nitda.gov.ng/intern/signin
+
+8 | Open your courses
+
+@ You're now on your dashboard. Tap the menu
+icon (=) at the top-left
+
+@ inthe menu that opens, tap “Courses.”
+
+Welcome Back
+
+Sign in to continue your Al/ML
+learning journey
+
+iter your Email
+
+= + gmail.com
+
+Oe ssword Forgot password?
+
+Remember me
+
+9) Signin
+
+Welcome back, Olorunsola
+Here's your internship progress summary.
+
+Current Course a
+View course outline
+Attendance Rate ih
+
+0%
+===== PAGE 8 =====
+NCAIR LMS [ool
+{oo} Olorunsola Owa
+shee tom
+
+DASHBOARD
+
+® overview
+
+MY LEARNING
+
+Assignments:
+
+TRACKING
+
+& Attendance
+
+l& Performance
+
+Fs | Register for Python Beginners
+
+@ On the “Python Beginners” card, tap the green
+“REGISTER” button
+
+© On registration day the button reads Python Beginners
+“REGISTER.” Before the day, and after 5 PM, it Instructor: ~
+shows “Locked” and can't be tapped "AVAILABLE
+. Progress 0%
+
+REGISTER
+===== PAGE 9 =====
+Register for Product Design
+(ul/Ux) Beginners
+@ Scroll to the “Product Design Beginners” card.
+Tap its green “REGISTER” button.
+
+a
+
+. Product Design Beginners
+SIWES) You must register for both courses. eens
+NYSC You may register for both at the same time. Progress 0%
+
+[ eyptorts: Tea O Assignments
+
+‘Schedule TBA
+
+You're done!
+rv) Your account is set up and your courses are registered. You may now leave the
+
+hall. Welcome to the NCAIR Internship Program.
+
+IF YOU GET STUCK
+
+Common problems & quick fixes
+
+I didn't get the email “Complete registration” won't open
+Check Spam / Junk / Trash. Wait a minute The email is in Spam/Trash. Move it to your
+and refresh. Still nothing? Tell a staff member. Inbox (mark “Not spam”) first, then tap again.
+My password is rejected The button says “Locked”
+
+Use 8+ characters with a letter and a Registration only opens on the day and closes
+number. Both password boxes must match. at 5 PM. If it's the day, refresh the page or ask
+
+staff.
+===== PAGE 10 =====
+My internet is slow
+
+Make sure your data is on. Move nearer a
+window, or ask staff about Wi-Fi
+
+ALREADY ONBOARDED BEFORE?
+
+Returning students
+
+1 forgot my password already
+
+On the sign-in screen tap “Forgot
+password?”, or ask a staff member to help.
+
+You don't need to onboard again. Just log in with the email and password you
+
+created during onboarding.
+
+Ims.ncair.nitda.gov.ng/intern/signin
+
+If you passed the cohort
+Open Courses. The next course has been
+
+unlocked for you — tap its green “REGISTER”
+button to enrol and continue.
+
+a] Quick reference card
+
+BRING
+
+Acceptance letter - NIN - phone - mobile data -
+
+a password you'll remember
+
+REMEMBER
+
+Check Spam - don't leave until done «
+registration closes 5 PM - SIWES = both
+courses compulsory
+
+If you did not pass a course
+
+Open Courses. On the course you failed you'll
+see a “Re-register” option — tap it to enrol
+again and retake it.
+
+THE 8 STEPS
+
+Find email + Complete registration — Fill form
+~ Create account + Sign in + Menu > Courses
+~ REGISTER Python + REGISTER Product
+Design
+
+RETURNING
+
+Sign in at Ims.ncair.nitda.gov.ng/intern/signin
+~ passed = next course - failed = re-register
+===== PAGE 11 =====
+‘8. NCAIR LMS - Internship Program Need help on the day? Ask any NCAIR staff in the hall

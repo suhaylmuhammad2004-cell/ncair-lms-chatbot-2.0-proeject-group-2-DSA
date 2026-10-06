@@ -1,0 +1,55 @@
+{
+  "_comment": "Single source of truth for every link the assistant can give. The router's allowed page ids, the tool schema, the answer prompt and the link guardrail are all generated from this file. To add or change a page, edit it here and nothing else. 'verified' = the URL appears in the official onboarding manual or on NCAIR's own pages; 'false' means it was carried over from the previous version and must be checked against the live site before release.",
+  "support_email": "support@ncair.nitda.gov.ng",
+  "support_email_verified": false,
+  "pages": [
+    {
+      "id": "lms_home",
+      "title": "NCAIR LMS home page",
+      "url": "https://lms.ncair.nitda.gov.ng",
+      "description": "Main page of the NCAIR Learning Management System. New interns do not self-register here: staff add them at the hall, then an invitation email with a personal 'Complete registration' link is sent. Use for 'where is the LMS / portal / website', or 'where do I register'.",
+      "verified": true,
+      "source": "manual p.1, p.4"
+    },
+    {
+      "id": "sign_in",
+      "title": "Intern sign-in page",
+      "url": "https://lms.ncair.nitda.gov.ng/intern/signin",
+      "description": "Where every intern logs in, new or returning, with email and password. Has the 'Forgot password?' option. Use for log in, sign in, return to my account, forgot password.",
+      "verified": true,
+      "source": "manual p.7, p.10"
+    },
+    {
+      "id": "courses",
+      "title": "Courses page (Menu > Courses)",
+      "url": "https://lms.ncair.nitda.gov.ng/intern/courses",
+      "description": "After signing in, the Courses page lists the course cards with their REGISTER or Re-register buttons. Use for registering for a course, retaking a failed course, or the next unlocked course.",
+      "verified": false,
+      "source": "carried over from v1; manual only says Menu > Courses"
+    },
+    {
+      "id": "profile",
+      "title": "Intern profile page",
+      "url": "https://lms.ncair.nitda.gov.ng/intern/profile",
+      "description": "The intern's own profile and onboarding details on the LMS. Use for viewing or editing profile details.",
+      "verified": false,
+      "source": "carried over from v1; not mentioned in manual"
+    },
+    {
+      "id": "ncair_website",
+      "title": "NCAIR official website",
+      "url": "https://ncair.nitda.gov.ng/",
+      "description": "Public website of the National Centre for Artificial Intelligence and Robotics. Use for general information about NCAIR, not for LMS tasks.",
+      "verified": true,
+      "source": "ncair.nitda.gov.ng is listed as NCAIR's website on its N-ATLaS release page"
+    },
+    {
+      "id": "contact",
+      "title": "NCAIR contact page",
+      "url": "https://ncair.nitda.gov.ng/contact/",
+      "description": "General NCAIR contact page. NOTE: onboarding help on the day is given in person by staff in the hall, there is no registration phone line. Use only if the user explicitly asks how to contact NCAIR.",
+      "verified": false,
+      "source": "carried over from v1"
+    }
+  ]
+}

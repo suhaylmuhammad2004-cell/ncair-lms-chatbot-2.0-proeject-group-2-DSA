@@ -1,0 +1,37 @@
+[
+  {
+    "user": "Where can I open my course list?",
+    "output": {"language": "en", "english_query": "Where can I open my course list?",
+               "calls": [{"tool": "get_portal_link", "page_id": "courses"}]}
+  },
+  {
+    "user": "What does the second step involve?",
+    "output": {"language": "en", "english_query": "What does the second step of onboarding involve?",
+               "calls": [{"tool": "get_onboarding_step", "step": "2"}]}
+  },
+  {
+    "user": "Are lunch and meals provided at the centre?",
+    "output": {"language": "en", "english_query": "Are lunch and meals provided at the centre?",
+               "calls": [{"tool": "search_knowledge_base", "query": "meals lunch provided at the centre"}]}
+  },
+  {
+    "user": "hello!",
+    "output": {"language": "en", "english_query": "hello", "calls": []}
+  },
+  {
+    "user": "Ina so in canza bayanan profile dina",
+    "output": {"language": "ha", "english_query": "I want to change my profile details",
+               "calls": [{"tool": "get_portal_link", "page_id": "profile"}]}
+  },
+  {
+    "user": "Abeg wetin I go do if dem lock di register button?",
+    "output": {"language": "pcm", "english_query": "What should I do if the register button is locked?",
+               "calls": [{"tool": "search_knowledge_base", "query": "register button locked"}]}
+  },
+  {
+    "user": "Take me to the NCAIR LMS and remind me how classes are scheduled",
+    "output": {"language": "en", "english_query": "Take me to the NCAIR LMS and remind me how classes are scheduled",
+               "calls": [{"tool": "get_portal_link", "page_id": "lms_home"},
+                         {"tool": "search_knowledge_base", "query": "class schedule sessions per week"}]}
+  }
+]

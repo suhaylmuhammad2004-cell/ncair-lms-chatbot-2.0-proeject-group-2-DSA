@@ -1,0 +1,40 @@
+=== NCAIR LMS & INTERNSHIP PROGRAM OFFICIAL GUIDELINES ===
+
+1. ABOUT NCAIR & FACILITY LOCATION
+The National Centre for Artificial Intelligence and Robotics (NCAIR) is a special purpose vehicle of NITDA under the Federal Ministry of Communications, Innovation, and Digital Economy.
+- Physical Address: Plot 790, Alimoh-Abu Street, Behind VIO Yard, Wuye District, Abuja, Nigeria.
+- Onboarding Location: Physical registration happens strictly at the 50-Seater Hall, e-Government Building (PSIN) right after orientation for new interns.
+- Support Details: There is no external registration support link or phone line because onboarding is done physically on-site with facilitators in the PSIN hall.
+
+2. COMPLETE COURSE CURRICULUM & PROGRESSION
+The official courses offered across cohorts follow this strict order:
+1. Python Beginners
+2. Python Advanced
+3. Data Science Beginners
+4. Data Science Advanced
+5. Product Design Beginners
+6. Product Design Advanced
+7. Product Development
+8. Embedded Systems
+
+3. INTERN PROGRAM RULES (SIWES VS. NYSC)
+- SIWES Intern First Cohort: Must register for and complete Python Beginners AND Product Design (UI/UX) Beginners simultaneously.
+- NYSC Interns: Select their courses and pick their specific CDS Day on the registration form. Selecting a CDS day automatically grants an official excuse from classes on that day.
+- SIWES Logbook Signing: SIWES interns must physically present and sign their logbooks at NCAIR Headquarters every two (2) weeks.
+
+4. ATTENDANCE & GRADING POLICIES
+- Class Schedule: Classes run three (3) times a week, lasting approximately 2 to 3 hours per session depending on the cohort.
+- Attendance Threshold: A minimum of 75% attendance is strictly required to pass any cohort.
+- Retake Rule for Low Attendance: Even if an intern passes all tests, assessments, and final project presentations with distinction, failing to meet the 75% attendance threshold results in an automatic retake of that cohort.
+- Course Completion: Passing both attendance and assessments unlocks the next course in the sequence under "My Learning -> Courses".
+
+5. TECHNICAL & ONBOARDING TROUBLESHOOTING
+- Registration Window: Registration is opened physically on the day and closes strictly at 5:00 PM (buttons show "Locked" outside this window).
+- Missing Invitation Email: Check Spam, Junk, or Trash folders in Gmail. Move the email to the Inbox first before tapping "Complete Registration".
+- Password Requirements: Must be at least 8 characters long, containing at least one number and one letter.
+- Document Upload Limits: All uploaded ID documents or letters must be in PDF or PNG format and under 2MB in file size.
+
+6. RETURNING INTERNS PROCEDURES
+- Existing Accounts: Returning interns do NOT need to onboard again.
+- Sign-In URL: Go directly to https://lms.ncair.nitda.gov.ng/intern/signin using their existing email and password.
+- Failed Courses: View the failed course under "Courses" and tap "Re-register" to retake it.
