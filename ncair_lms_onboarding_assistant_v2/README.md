@@ -89,7 +89,8 @@ Version 2.0 is better on routing, answers, links and retrieval, but slower and i
 
 ```bash
 # 1. Get the project and open a terminal in its folder
-cd DSA_Project_Final
+https://github.com/suhaylmuhammad2004-cell/ncair-lms-chatbot-2.0-proeject-group-2-DSA.git
+cd ncair-lms-chatbot
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
